@@ -476,4 +476,19 @@
   id="pro-elements-handlers-js"></script>
   <!-- Page cached by LiteSpeed Cache 7.1 on 2025-08-17 13:09:37 -->
 </body>
+  <script>
+  // Countdown start value (seconds)
+  var seconds = 60; // apne hisaab se set karo (30, 45, 120...)
+
+  var x = setInterval(function() {
+    document.getElementById("countdown").innerHTML = seconds + "s";
+
+    seconds--;
+
+    if (seconds < 0) {
+      clearInterval(x);
+      document.getElementById("countdown").innerHTML = "Time Over";
+    }
+  }, 1000);
+</script>
 </html>
